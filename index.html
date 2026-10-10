@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="北航三校区 V4 外观模型交互浏览。学院路、沙河、杭州国际校园，可旋转、缩放与切换重点地标。">
+  <meta name="theme-color" content="#102d3e"><title>北航三校区 · 3D 校园</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three.module.js","three/addons/":"./assets/vendor/addons/"}}</script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="北航三校区首页"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 30V13l14-7 14 7v17M13 30V17l7-4 7 4v13M3 33h34M20 13v20"/></svg><span>北航三校区<small>3D CAMPUS EXPLORER</small></span></a>
+      <nav class="campus-tabs" aria-label="选择校区"><button data-campus="xueyuan" class="active" aria-pressed="true">学院路<span>北京 · 海淀</span></button><button data-campus="shahe" aria-pressed="false">沙河<span>北京 · 昌平</span></button><button data-campus="hangzhou" aria-pressed="false">杭州<span>国际校园</span></button></nav>
+      <button id="about-button" class="quiet-button" aria-label="打开模型说明">模型说明 <span aria-hidden="true">↗</span></button>
+    </header>
+    <main id="viewer" aria-label="可交互三维校园" tabindex="0">
+      <div id="canvas-host"></div>
+      <aside class="info-panel">
+        <div class="eyebrow"><span class="status-dot"></span> V4 · 真实工程转换</div>
+        <h1 id="campus-title">学院路校区</h1><p id="campus-description" class="description">从历史主楼到新主楼，探索校园建筑与景观。</p>
+        <div class="panel-rule"></div>
+        <div class="section-label">重点地标 <span>点击定位</span></div>
+        <div id="landmarks" class="landmarks"></div>
+        <p id="landmark-note" class="landmark-note">自由旋转视角，查看建筑之间的空间关系。</p>
+      </aside>
+      <div class="view-tools" aria-label="视图工具"><button id="reset" title="重置全景" aria-label="重置全景">⌂<span>全景</span></button><button id="zoom-in" title="放大" aria-label="放大">＋</button><button id="zoom-out" title="缩小" aria-label="缩小">−</button><button id="auto-rotate" title="自动环绕" aria-label="自动环绕" aria-pressed="false">↻</button></div>
+      <div class="compass" aria-hidden="true"><div id="compass-arrow">↑</div><span>模型北向</span></div>
+      <div class="bottom-bar"><div class="quality-group"><label for="quality">显示</label><select id="quality" disabled aria-label="本交付仅含轻量模式"><option value="lite">轻量交付版</option></select><span id="model-size">按校区加载</span></div><p class="controls-hint"><span class="desktop-hint">拖动旋转 · 滚轮缩放 · 右键平移</span><span class="mobile-hint">单指旋转 · 双指缩放 / 平移</span></p><button id="info-short" class="info-short">外观近似模型 ⓘ</button></div>
+      <section id="loading" class="loading-overlay" aria-live="polite"><div class="loading-card"><div class="loader-mark" aria-hidden="true"><span></span><span></span><span></span></div><h2 id="loading-title">正在载入学院路校区</h2><p id="loading-detail">载入实际 V4 三维模型，请稍候</p><progress id="progress" max="100" value="0"></progress><div class="loading-meta"><span id="loading-percent">0%</span><span>模型仅在切换到该校区时下载</span></div><button id="retry" class="primary-button" hidden>重新加载</button></div></section>
+      <div id="toast" class="toast" role="status" hidden></div>
+    </main>
+    <footer><span>BEIHANG / 三校区外观模型</span><span>模型制作 2026-10-09 · 照片日期未知 · 非测绘 / BIM</span></footer>
+  </div>
+  <dialog id="about-dialog"><form method="dialog"><button class="dialog-close" aria-label="关闭说明">×</button></form><p class="eyebrow">ABOUT THE MODEL</p><h2>看见校园，也看见依据的边界。</h2><p>此网站直接转换已完成的三校区 V4 Blender 工程，保留原工程的可见建筑、道路和景观。它是照片辅助的外观近似重建，并非官方校园导航。</p><h3>资料与日期</h3><p>V4 模型制作于 2026 年 10 月 9 日。依据包含用户提供的本地照片及既有公开资料；照片没有可验证的统一拍摄日期，可能跨越不同时期，不能代表 2026 年的完整实时现状。</p><h3>轻量交付版</h3><p>本交付包含三校区轻量模型，减少次要窗框、窗台等重复细节，并降低树冠细分；V4 重点对象保留，建筑没有全局减面。全部转换自实际 V4 工程，按校区加载，共享树冠使用 GPU 实例化。此版本不包含精细模型，网页照明与 Blender 渲染存在差异。</p><h3>适用范围</h3><p>建筑尺度、开间、曲面和植物分布含照片比例推定。请勿用于测绘、施工、工程设计、无障碍规划或安全通行。隐藏的旧方案及未确认竣工对象不会作为现状显示。</p><p class="muted">原始照片未嵌入网站。脚本、模型和图标均随站点同源提供，无第三方字体或 CDN 运行时依赖。</p></dialog>
+  <noscript><div class="noscript">请启用 JavaScript 以浏览三维校园。该页面需要支持 WebGL 2 的现代浏览器。</div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

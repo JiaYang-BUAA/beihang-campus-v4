@@ -1,0 +1,305 @@
+{
+  "modelVersion": "V4",
+  "modelDate": "2026-10-09",
+  "sourcePhotoDate": "unknown",
+  "campuses": {
+    "xueyuan": {
+      "title": "学院路校区",
+      "description": "从历史主楼到新主楼，探索校园建筑与景观。",
+      "assets": {
+        "lite": {
+          "parts": [
+            "./assets/models/xueyuan-lite.glb.gz"
+          ],
+          "bytes": 6453653,
+          "rawBytes": 51950976,
+          "sha256": "4a99ab4812b15742f7dd9019e8b1138163952d15a5a58afa983875bb90ce05d6",
+          "triangles": 1166356,
+          "drawCalls": 86,
+          "instances": 2326
+        }
+      },
+      "landmarks": [
+        {
+          "title": "历史主楼",
+          "target": [
+            350,
+            12,
+            -280
+          ],
+          "direction": [
+            1,
+            0.65,
+            0.42
+          ],
+          "distance": 210,
+          "note": "历史主楼建筑群。外观尺度含公开资料与照片比例推定。"
+        },
+        {
+          "title": "新主楼",
+          "target": [
+            386,
+            24,
+            140
+          ],
+          "direction": [
+            1,
+            1,
+            1
+          ],
+          "distance": 390,
+          "note": "保留 V4 工程中 48 米、11 层主体与六层连接体。"
+        },
+        {
+          "title": "航空航天博物馆",
+          "target": [
+            299,
+            12,
+            -38
+          ],
+          "direction": [
+            0.35,
+            0.32,
+            1
+          ],
+          "distance": 165,
+          "note": "V4 修正拱券入口、青蓝玻璃与红色后翼。背立面仍有未知。"
+        },
+        {
+          "title": "蓝跑道与体育区",
+          "target": [
+            36,
+            8,
+            127
+          ],
+          "direction": [
+            0.3,
+            1.3,
+            1
+          ],
+          "distance": 530,
+          "note": "V4 蓝色跑道、分段看台屋盖，以及体育馆与游泳馆的不同屋型。"
+        },
+        {
+          "title": "旧东门",
+          "target": [
+            513,
+            4,
+            -280
+          ],
+          "direction": [
+            1,
+            0.48,
+            0.55
+          ],
+          "distance": 95,
+          "note": "低门房、蓝字校名石与道路黄网格。字形为中性近似。"
+        },
+        {
+          "title": "新东门",
+          "target": [
+            514,
+            5,
+            16
+          ],
+          "direction": [
+            1,
+            0.55,
+            0.45
+          ],
+          "distance": 105,
+          "note": "四根独立门柱，中间两根较高；与旧东门为不同入口。"
+        }
+      ]
+    },
+    "shahe": {
+      "title": "沙河校区",
+      "description": "沿校园中轴，观察主楼、图书馆与南门的空间序列。",
+      "assets": {
+        "lite": {
+          "parts": [
+            "./assets/models/shahe-lite.glb.gz"
+          ],
+          "bytes": 5582394,
+          "rawBytes": 41239920,
+          "sha256": "a4bbe389c81a4505ec32a7d68119692ce9063064f1f63ff6f8775e4643de981b",
+          "triangles": 1092649,
+          "drawCalls": 89,
+          "instances": 2794
+        }
+      },
+      "landmarks": [
+        {
+          "title": "主楼与天空之镜",
+          "target": [
+            12,
+            22,
+            -71
+          ],
+          "direction": [
+            0.65,
+            0.8,
+            1
+          ],
+          "distance": 500,
+          "note": "保留主楼公开高度；A/B 连接体约 14–40 米属于照片比例估计。"
+        },
+        {
+          "title": "新图书馆",
+          "target": [
+            110.5,
+            19,
+            -34.85
+          ],
+          "direction": [
+            0.55,
+            1.05,
+            1
+          ],
+          "distance": 220,
+          "note": "穹顶、双天井、光伏与屋顶花园沿用既有较新资料。"
+        },
+        {
+          "title": "南门",
+          "target": [
+            -3,
+            5,
+            418
+          ],
+          "direction": [
+            0.5,
+            0.48,
+            1
+          ],
+          "distance": 150,
+          "note": "V4 厚石材片墙与透空横槽。校名几何不是实物书法的精确摹刻。"
+        },
+        {
+          "title": "主楼 B 座东端",
+          "target": [
+            -25,
+            30,
+            -154
+          ],
+          "direction": [
+            1,
+            0.5,
+            0.6
+          ],
+          "distance": 145,
+          "note": "V4 仅修正照片可见端面的石材与玻璃竖槽，未泛化到未知端面。"
+        },
+        {
+          "title": "1 号教学楼",
+          "target": [
+            60,
+            10,
+            282
+          ],
+          "direction": [
+            -1,
+            0.65,
+            0.65
+          ],
+          "distance": 135,
+          "note": "V4 轴线侧高窗组、浅色实体端墙与开放双柱框架。"
+        }
+      ]
+    },
+    "hangzhou": {
+      "title": "杭州国际校园",
+      "description": "大屋顶、水庭与科研组团，呈现校园的层次与连接。",
+      "assets": {
+        "lite": {
+          "parts": [
+            "./assets/models/hangzhou-lite.glb.gz"
+          ],
+          "bytes": 3037151,
+          "rawBytes": 21839668,
+          "sha256": "05fc09f6505219b5eb9d7f69cfa018799fb70b3163eaf7adc9088120bd16859c",
+          "triangles": 825272,
+          "drawCalls": 74,
+          "instances": 2129
+        }
+      },
+      "landmarks": [
+        {
+          "title": "大屋顶与水庭",
+          "target": [
+            0,
+            18,
+            0
+          ],
+          "direction": [
+            -0.75,
+            1,
+            0.85
+          ],
+          "distance": 700,
+          "note": "保留大屋顶 13 处开口与水庭关系。此视图是外观模型。"
+        },
+        {
+          "title": "R2 科研二号楼入口",
+          "target": [
+            -144,
+            10,
+            -209
+          ],
+          "direction": [
+            1,
+            0.6,
+            -0.65
+          ],
+          "distance": 175,
+          "note": "V4 东北入口、铜色窗带、局部窄竖肋与灰色铺装前庭。"
+        },
+        {
+          "title": "R2 屋面与露台",
+          "target": [
+            -196,
+            22,
+            -147
+          ],
+          "direction": [
+            0.8,
+            1.1,
+            -0.7
+          ],
+          "distance": 325,
+          "note": "三组已定位研究楼天窗之一；屋顶网格只在证据支持的局部。"
+        },
+        {
+          "title": "北区食堂",
+          "target": [
+            55,
+            6,
+            -259
+          ],
+          "direction": [
+            -1,
+            0.6,
+            1
+          ],
+          "distance": 150,
+          "note": "V4 分层退进白壳、铜色竖片、绿色窄退台与外楼梯。"
+        },
+        {
+          "title": "北区宿舍",
+          "target": [
+            176,
+            23,
+            -352
+          ],
+          "direction": [
+            0.7,
+            0.9,
+            1
+          ],
+          "distance": 365,
+          "note": "D8/D10 的实体窗间板修正为蓝色；精确开间与尺度仍含推定。"
+        }
+      ]
+    }
+  },
+  "deliveryEdition": "lite-only"
+}
