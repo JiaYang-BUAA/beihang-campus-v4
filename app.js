@@ -6,7 +6,8 @@ function start(THREE,OrbitControls,GLTFLoader,data){
   if(!('DecompressionStream' in window))throw new Error('当前浏览器不支持模型解压，请更新浏览器后重试。');
   const host=$('canvas-host'),viewer=$('viewer');
   let renderer;
-  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});}catch(e){throw new Error('WebGL 2 不可用，请启用浏览器硬件加速。');}
+  // Campus-wide views must still distinguish the model's closely layered surfaces.
+  try{renderer=new THREE.WebGLRenderer({antialias:true,logarithmicDepthBuffer:true,alpha:false,powerPreference:'high-performance'});}catch(e){throw new Error('WebGL 2 不可用，请启用浏览器硬件加速。');}
   renderer.setClearColor(0xdfe7e6);renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.2;host.appendChild(renderer.domElement);
   renderer.domElement.setAttribute('aria-label','拖动旋转模型，滚轮或双指缩放，右键或双指平移');
   const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(43,1,.1,15000);
